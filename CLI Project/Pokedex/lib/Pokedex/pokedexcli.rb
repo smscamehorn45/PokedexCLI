@@ -6,8 +6,8 @@ class PokedexCLI
     puts "Beep Boop..Dex booted up! Which pokemon would you like me to load for you, trainer?"
     user_input = gets.chomp
     until user_input == "exit"
-      if user_input == "team" || user_input == "new team"
-        make_team(dex)
+      if user_input =="exit"
+        exit
       else
         mon = dex.make_pokemon(user_input.downcase)
         if mon != "error"
@@ -20,5 +20,6 @@ class PokedexCLI
       user_input = gets.chomp
     end
   end
+end
 
   
