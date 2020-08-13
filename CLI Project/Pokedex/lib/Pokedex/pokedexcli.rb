@@ -21,13 +21,4 @@ class PokedexCLI
     end
   end
 
-  def make_team(pokedex)
-    puts "Alright, let's make a new team! This might take a few moments..."
-    pokemon_ids = Array.new(6) { rand(1..829) }
-    team = Team.new
-    pokemon_ids.each do |id|
-      team.add_to_team(pokedex.make_pokemon(id))
-    end
-    team.list_pokemon
-  end
-end
+  
